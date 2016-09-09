@@ -18,6 +18,27 @@ ruby:
     - else
       h2 Это тег h2
       span(style="color: red") А тут мы вставим прайс из руби кода внутри строки #{order.price} вот так
+      
+      
+ruby:
+  а = 3
+  b = 79
+  orders={title:'Заголовок',price:'3000.00'}
+  orders1=['q','r','3']
+  def a_unless_current
+    @page_current ? {tag: 'span'} : {tag: 'a', href: 'http://slim-lang.com/'}
+  end    
+
+- @page_current = true
+*a_unless_current Link
+- @page_current = false
+*a_unless_current Link
+     -#{b} = #{а*b}
+#tr #{а*b}      
+.hj #{orders1[1]}
+.hj #{orders['title']}
+
+      
 
 
 
