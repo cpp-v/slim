@@ -7,5 +7,17 @@ ruby:
 - @page_current = false
 *a_unless_current Link
 
+/обход массива
+- @orders.each do |order|
+  = order.title
+  br
+  = order.price
+  .class#id(style="background: yellow;")
+    - if order.price > 200
+      p Это тег p и цена больше 200
+    - else
+      h2 Это тег h2
+      span(style="color: red") А тут мы вставим прайс из руби кода внутри строки #{order.price} вот так
+
 
 
